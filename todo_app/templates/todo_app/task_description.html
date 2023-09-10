@@ -1,0 +1,39 @@
+<style>
+    .task-container {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.task-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.delete-button {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.delete-button:hover {
+  background-color: #e60000;
+  cursor: pointer;
+}
+</style>
+
+<div class="task-container">
+  <h1 class="task-title">Title</h1>
+  <p class="task-description">{{ task.description }}</p>
+  <a href="{% url 'delete_task' task.id %}" class="delete-button">Delete</a>
+</div>
